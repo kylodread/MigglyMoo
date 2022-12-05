@@ -37,8 +37,6 @@ flutter:
   assets:
     - assets/material.png
     - assets/audios/
-    - assets/alipay.jpg
-    - assets/wechat.png
     
     
   fonts:
