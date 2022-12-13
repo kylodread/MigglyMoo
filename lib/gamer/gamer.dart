@@ -249,7 +249,7 @@ class GameControl extends State<Game> with RouteAware {
       _points += clearLines.length * _level * 5;
 
       //up level possible when cleared
-      int level = (_cleared ~/ 50) + _LEVEL_MIN;
+      int level = (_cleared ~/ 10) + _LEVEL_MIN;
       _level = level <= _LEVEL_MAX && level > _level ? level : _level;
     } else {
       _states = GameStates.mixing;

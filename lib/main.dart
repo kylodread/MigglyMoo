@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:tetris/gamer/gamer.dart';
@@ -31,7 +30,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'tetris',
+      title: 'migglymoo',
       localizationsDelegates: [
         S.delegate,
         GlobalMaterialLocalizations.delegate,
@@ -39,7 +38,7 @@ class MyApp extends StatelessWidget {
       ],
       navigatorObservers: [routeObserver],
       supportedLocales: S.delegate.supportedLocales,
-      theme: ThemeData(primarySwatch: Colors.red, fontFamily: 'Silkscreen'),
+      theme: ThemeData(primarySwatch: Colors.grey, fontFamily: 'Silkscreen'),
       home: Scaffold(
         body: Sound(child: Game(child: KeyboardController(child: _HomePage()))),
       ),
@@ -49,7 +48,7 @@ class MyApp extends StatelessWidget {
 
 const SCREEN_BORDER_WIDTH = 3.0;
 
-const BACKGROUND_COLOR = Color.fromARGB(255, 24, 25, 26);
+const BACKGROUND_COLOR = Color.fromRGBO(0, 0, 0, 1);
 
 class _HomePage extends StatelessWidget {
   @override

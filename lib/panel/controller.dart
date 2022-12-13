@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:tetris/gamer/gamer.dart';
 import 'package:tetris/generated/l10n.dart';
 import 'package:vibration/vibration.dart';
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 class GameController extends StatelessWidget {
   @override
@@ -29,7 +30,6 @@ const double _DIRECTION_SPACE = 16;
 
 const double _iconSize = 16;
 
-
 class DirectionController extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -52,6 +52,7 @@ class DirectionController extends StatelessWidget {
                         child: Icon(
                           Icons.arrow_drop_up,
                           size: _iconSize,
+                          color: Colors.white,
                         )),
                   ),
                   Transform.scale(
@@ -61,6 +62,7 @@ class DirectionController extends StatelessWidget {
                         child: Icon(
                           Icons.arrow_right,
                           size: _iconSize,
+                          color: Colors.white,
                         )),
                   ),
                 ],
@@ -75,6 +77,7 @@ class DirectionController extends StatelessWidget {
                         child: Icon(
                           Icons.arrow_left,
                           size: _iconSize,
+                          color: Colors.white,
                         )),
                   ),
                   Transform.scale(
@@ -84,6 +87,7 @@ class DirectionController extends StatelessWidget {
                         child: Icon(
                           Icons.arrow_drop_down,
                           size: _iconSize,
+                          color: Colors.white,
                         )),
                   ),
                 ],
@@ -103,6 +107,7 @@ class DirectionController extends StatelessWidget {
                   _Button(
                       enableLongPress: false,
                       size: _DIRECTION_BUTTON_SIZE,
+                      color: Colors.yellow,
                       onTap: () {
                         Game.of(context).rotate();
                         Vibration.vibrate(duration: 35, amplitude: 1);
@@ -110,6 +115,7 @@ class DirectionController extends StatelessWidget {
                   SizedBox(width: _DIRECTION_SPACE),
                   _Button(
                       size: _DIRECTION_BUTTON_SIZE,
+                      color: Colors.blueGrey.shade50,
                       onTap: () {
                         Game.of(context).right();
                         Vibration.vibrate(duration: 35, amplitude: 1);
@@ -122,6 +128,7 @@ class DirectionController extends StatelessWidget {
                 children: <Widget>[
                   _Button(
                       size: _DIRECTION_BUTTON_SIZE,
+                      color: Colors.blueGrey.shade100,
                       onTap: () {
                         Game.of(context).left();
                         Vibration.vibrate(duration: 35, amplitude: 1);
@@ -129,6 +136,7 @@ class DirectionController extends StatelessWidget {
                   SizedBox(width: _DIRECTION_SPACE),
                   _Button(
                     size: _DIRECTION_BUTTON_SIZE,
+                    color: Colors.blueGrey.shade100,
                     onTap: () {
                       Game.of(context).down();
                       Vibration.vibrate(duration: 35, amplitude: 1);
@@ -198,6 +206,7 @@ class DropButton extends StatelessWidget {
       text: 'Drop',
       child: _Button(
           enableLongPress: false,
+          color: Colors.blueGrey.shade100,
           size: Size(90, 90),
           onTap: () {
             Game.of(context).drop();

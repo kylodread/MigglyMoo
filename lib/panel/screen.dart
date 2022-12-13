@@ -11,6 +11,8 @@ import 'status_panel.dart';
 
 const Color SCREEN_BACKGROUND = Color(0xff9ead86);
 
+//const Color SCREEN_BACKGROUND = Color(0xff9ead86);
+
 /// screen H : W;
 class Screen extends StatelessWidget {
   ///the with of screen

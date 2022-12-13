@@ -22,7 +22,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "cleans": MessageLookupByLibrary.simpleMessage("Cleans <50>"),
+        "cleans": MessageLookupByLibrary.simpleMessage("Cleans <10>"),
         "level": MessageLookupByLibrary.simpleMessage("Level <1-6>"),
         "next": MessageLookupByLibrary.simpleMessage("Next Block"),
         "pause_resume": MessageLookupByLibrary.simpleMessage("Pause"),
